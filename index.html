@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<meta content="个人博客,前端,HTML,css,JavaScript">
+<meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0" />
+<title>quite2333的博客</title> 
+<link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="./css/font/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/font/Roboto-Condensed/Roboto-Condensed.css">
+<link rel="stylesheet" href="./css/font/fontello-f75c85fd/css/log.css">
+<link rel="stylesheet" href="./css/font/webfont-2/iconfont.css">
+<link rel="stylesheet" href="./css/general.css">
+<link rel="stylesheet" href="./css/nav.css">
+<link rel="stylesheet" type="text/css" href="./css/camroll_slider.css">
+<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./js/camroll_slider.js"></script>
+<base href="#">
+<style>
+    .container{
+        clear: both;
+        display: flex;
+        flex-direction: column;
+    }
+    .read-more{
+        margin-top: 10px;
+    }
+
+    .little-container a:link{
+        color:#ef5285;
+    }
+</style>
+</head>
+    <!-- 导航栏 -->
+    <header>
+        <nav id="navi">
+            <ul class="main">
+            <li class="title"><a><i class="iconfont icon-gengduo" aria-hidden="true"></i>菜单</a>
+                <ul class="drop menu">
+                <li><a  href="./index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;首页</a></li>
+                <li><a href="./introduction.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;个人简介</a></li>
+                <li><a href="./txt-list.html"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp;文章列表</a></li>
+                <li><a href="./life.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;生活轨迹</a></li>
+                <li><a href="./study-res.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;学习资源</a></li>
+                </ul>
+            </li>
+            <li class="title mhiden">
+                <a href="./login.html"><i class="icon icon-login" aria-hidden="true"></i>登录</a>
+            </li>
+            <li class="title mhiden">
+                <a href="javascript:void(0)" onclick="logout()"><i class="icon icon-register" aria-hidden="true"></i>登出</a>
+            </li>
+            <li class="user_txt">
+                <h4 id="user"></h4>
+            </li>
+            </ul>
+        </nav>
+        <div name="bg-scoll">
+            <div id="my-slider" class="crs-wrap">
+                <div class="crs-screen">
+                    <div class="crs-screen-roll">
+                    <div class="crs-screen-item" style="background-image: url('./css/images/1.jpg')">
+                    </div>
+                    <div class="crs-screen-item" style="background-image: url('./css/images/2.jpg')">
+                    </div>
+                    <div class="crs-screen-item" style="background-image: url('./css/images/3.jpg')">
+                    </div>
+                    <div class="crs-screen-item" style="background-image: url('./css/images/4.jpg')">
+                    </div>
+                    <div class="crs-screen-item" style="background-image: url('./css/images/5.jpg')">
+                    </div>
+                    <div class="crs-screen-item" style="background-image: url('./css/images/6.jpg')">
+                    </div>
+                    </div>
+                </div>
+                <div class="crs-bar">
+                    <div class="crs-bar-roll-current"></div>
+                    <div class="crs-bar-roll-wrap">
+                    <div class="crs-bar-roll">
+                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/1.jpg')"></div>
+                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/2.jpg')"></div>
+                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/3.jpg')"></div>
+                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/4.jpg')"></div>
+                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/5.jpg')"></div>
+                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/6.jpg')"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </header>
+
+<body >
+    <!-- 内容栏 -->
+    <div class="cgap">
+        <div class="cgap1">
+        </div>
+        <div class="cgap2">
+        内容推荐
+        </div>
+        <div class="cgap1">
+        </div>
+    </div>
+    <div class="container">
+        <div>        
+            <div class="title-sm margin-t-20 margin-b-30">
+            <h4 class="text-center text-uppercase ">You might like this</h4>
+            </div>
+        </div>
+        <div class="center">
+            <div class="little-container">
+                <div class="post">
+                <div class="image"><a href="acm1.html"><img src="./css/images/blog1.jpg" alt="" class="img-responsive"></a></div>
+                <h3><a href="acm1.html">Tempter of the Bone（详解）</a></h3>
+                <p class="post__intro">The doggie found a bone in an ancient maze, which fascinated him a lot. However, when he picked it up, the maze began to shake, and the doggie could feel the ground sinking. He realized that the bone was a trap, and he tried desperately to get out of this maze.</p>
+                <p class="read-more"><a href="acm1.html" class="btn btn-ghost">Continue reading     </a></p>
+                </div>
+            </div>
+
+            <div class="little-container">
+                <div class="post">
+                <div class="image"><a href="text.html"><img src="./css/images/blog2.jpg" alt="" class="img-responsive"></a></div>
+                <h3><a href="Moving Tables.html">Moving Tables</a></h3>
+                <p class="post__intro">在一个狭窄的走廊里将桌子从一个房间移动到另一个房间，走廊的宽度只能允许一个桌子通过。给出t，表示有t组测试数据。再给出n，表示要移动n个桌子。n下面有n行，每行两个数字，表示将桌子从a房间移到b房间。走廊的分布图如一图所示，每移动一个桌子到达目的地房间需要花10分钟，问移动n个桌子所需要的时间。</p>
+                <p class="read-more"><a href="text.html" class="btn btn-ghost">Continue reading     </a></p>
+                </div>
+            </div>
+
+            <div class="little-container">
+                <div class="post">
+                <div class="image"><a href="text.html"><img src="./css/images/blog3.jpg" alt="" class="img-responsive"></a></div>
+                <h3><a href="The Horse Racing.html">The Horse Racing</a></h3>
+                <p class="post__intro">Were Tian Ji lives in nowadays, he will certainly laugh at himself. Even more, were he sitting in the ACM contest right now, he may discover that the horse racing problem can be simply viewed as finding the maximum matching in a bipartite graph. Draw Tian's horses on one side, and the king's horses on the other. Whenever...</p>
+                <p class="read-more"><a href="text.html" class="btn btn-ghost">Continue reading     </a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <iframe class="foot"  src="foot.html" frameborder="0" width="100%" height="30px"></iframe>
+    <img class="footer-img" id="gotoTop" src="./images/backtop.png" >
+</body>
+<script>
+    $("#my-slider").camRollSlider();
+</script>
+
+<style>
+        .foot{
+        position: absolute;
+        bottom: 0;
+        margin-top: 10px;
+    }
+    .post {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    .post .image {
+        position: relative;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    .img-responsive{
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    .post .post__intro {
+        font-size: 15px;
+        color: #999999;
+    }
+</style>
+<script src="./js/gototop.js"></script>
+<script src="./js/login.js"></script>
+
+</html>

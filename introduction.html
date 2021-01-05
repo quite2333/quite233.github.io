@@ -1,0 +1,441 @@
+<html>
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>个人简介</title>
+<link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="./css/font/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/font/Roboto-Condensed/Roboto-Condensed.css">
+<link rel="stylesheet" href="./css/font/fontello-f75c85fd/css/log.css">
+<link rel="stylesheet" href="./css/font/webfont-2/iconfont.css">
+<link rel="stylesheet" href="./css/general.css">
+<link rel="stylesheet" href="./css/nav.css">
+<link rel="stylesheet" type="text/css" href="./css/camroll_slider.css">
+<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./js/camroll_slider.js"></script>
+</head>
+<style>
+    .siderl{
+        width: 30%;
+        height: 100%;
+        min-width: 300px;
+        max-width: 450px;
+        min-height: 900px;
+        position: absolute;
+        background-image:url(./images/intro7.jpg);
+        background-position:  0 0;
+        background-size:  cover;
+        background-repeat: no-repeat ;
+        font: white;
+    }
+    .introimg{
+        width: 100%;
+        min-width: 300px;
+        max-width: 450px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .introimg img{
+
+        border-radius: 110px !important;
+        width: 130px;
+        height: 130px;
+        box-shadow: 0 0 0 5px #fff;
+    }
+    .introtxt{
+        z-index: 2;
+        position: absolute;
+        color: white;
+        font-size: 16px;
+    }
+    .caption{
+        text-align: center;
+        margin-top: 30px;
+        font-size: 30px;
+    }
+    .des{
+        display: block;
+        text-align: center;
+        margin-top: 25px;
+    }
+    .des span{
+        margin-top: 15px;
+        display: block;
+    }
+    .blockright{
+        left: 20px;
+        position: relative;
+        width: 90%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        height: auto;
+        min-height: 900px;
+        box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    }
+    .introart{
+        background-color: wheat;
+        border-radius:20%;
+    }
+    .blockleft{
+        width: 300px;
+    }
+    .tab{
+        display:inline-block;
+        width: 90%;
+        margin-top: 10px;
+        margin-left: 10px;
+
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ddd ;
+    }
+    .tab a{
+        border-color: transparent transparent;
+        color: #03a9f5;
+        font-family:"Roboto-Condensed";
+        position: relative;
+        padding: 5px;
+        margin-bottom: -5px;
+        text-decoration: none;
+    }
+    .tab a::after{
+        background: #03a9f5;
+        bottom: -1px;
+        content: "";
+        height: 2px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        z-index: 999;
+    }
+    .intropra{
+        width: 90%;
+
+        margin-top: 20px;
+    }
+    .intropra p{
+        font-family:'NSimSun';
+        margin-left: 40px;
+        margin-bottom: 10px;
+    }
+    .intropra .book{
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+    .book a{
+        text-decoration: none;
+        color:tan;
+    }
+</style>
+
+    <header>
+    <!-- 导航栏 -->
+    <nav id="navi">
+        <ul class="main">
+        <li class="title">
+            <a><i class="iconfont icon-gengduo" aria-hidden="true"></i>菜单</a>
+            <ul class="drop menu">
+            <li><a  href="./index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;首页</a></li>
+            <li><a href="./introduction.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;个人简介</a></li>
+            <li><a href="./txt-list.html"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp;文章列表</a></li>
+            <li><a href="./life.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;生活轨迹</a></li>
+            <li><a href="./study-res.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;学习资源</a></li>
+            </ul>
+        </li>
+        <li class="title mhiden">
+            <a href="./login.html"><i class="icon icon-login" aria-hidden="true"></i>登录</a>
+        </li>
+        <li class="title mhiden">
+            <a href="javascript:void(0)" onclick="logout()"><i class="icon icon-register" aria-hidden="true"></i>登出</a>
+        </li>
+        <li class="user_txt">
+            <h4 id="user">Hi!</h4>
+        </li>
+        </ul>
+    </nav>
+    <!-- 轮播图 -->
+    <div name="bg-scoll">
+        <div id="my-slider" class="crs-wrap">
+            <div class="crs-screen">
+                <div class="crs-screen-roll">
+                <div class="crs-screen-item" style="background-image: url('./css/images/1.jpg')">
+                    <!-- <div class="crs-screen-item-content"><h1>learn more...</h1></div> -->
+                </div>
+                <div class="crs-screen-item" style="background-image: url('./css/images/2.jpg')">
+                    <!-- <div class="crs-screen-item-content"><h1>learn more...</h1></div> -->
+                </div>
+                <div class="crs-screen-item" style="background-image: url('./css/images/3.jpg')">
+                    <!-- <div class="crs-screen-item-content"><h1>learn more...</h1></div> -->
+                </div>
+                <div class="crs-screen-item" style="background-image: url('./css/images/4.jpg')">
+                    <!-- <div class="crs-screen-item-content"><h1>learn more...</h1></div> -->
+                </div>
+                <div class="crs-screen-item" style="background-image: url('./css/images/5.jpg')">
+                    <!-- <div class="crs-screen-item-content"><h1>learn more...</h1></div> -->
+                </div>
+                <div class="crs-screen-item" style="background-image: url('./css/images/6.jpg')">
+                    <!-- <div class="crs-screen-item-content"><h1>learn more...</h1></div> -->
+                </div>
+                </div>
+            </div>
+            <div class="crs-bar">
+                <div class="crs-bar-roll-current"></div>
+                <div class="crs-bar-roll-wrap">
+                <div class="crs-bar-roll">
+                    <div class="crs-bar-roll-item" style="background-image: url('./css/images/1.jpg')"></div>
+                    <div class="crs-bar-roll-item" style="background-image: url('./css/images/2.jpg')"></div>
+                    <div class="crs-bar-roll-item" style="background-image: url('./css/images/3.jpg')"></div>
+                    <div class="crs-bar-roll-item" style="background-image: url('./css/images/4.jpg')"></div>
+                    <div class="crs-bar-roll-item" style="background-image: url('./css/images/5.jpg')"></div>
+                    <div class="crs-bar-roll-item" style="background-image: url('./css/images/6.jpg')"></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</header>
+<body>
+    <div class="cgap">
+        <div class="cgap1"></div>
+        <div class="cgap2">
+            我的简介
+        </div>
+        <div class="cgap1">
+        </div>
+    </div>
+    <div class="container">
+
+        <div id="siderl" class="siderl">
+            <aside>
+                <div class="introtxt">
+                    <div class="introimg" >
+                        <img  src="./images/portrait1.png" alt="">
+                    </div>
+                    <div class="caption">
+                        <span>quite2333</span>
+
+                    </div>
+                    <div class="des">
+                        <span>MY NAME:杨天辉</span>
+                        <span>SCHOOL:<a href="http://www.hdu.edu.cn/">HDU</a></span>
+                        <span>MAJOR:软件工程专业</span>
+                        <span>====CONTACT ME:1186585934====</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <div id="blockr" class="blockright">
+            <main>
+                <article>
+                    <div class="introart"></div>
+                        <div>
+                            <div class="tab">
+                                <a href="#">About Me</a>
+                            </div>
+                            <div class="intropra">
+                                <p>&nbsp&nbsp这里是前端入门小白一枚，软件工程本科在读中~</p>
+                                <p>平时热爱互联网，关注互联网业内的众多产品，不断扩充对行业发展趋势的认识；</p>
+                                <p>为人朴实无华，知足常乐，不喜欢做作，更讨厌说违心话，做违心事。</p>
+                                <p>在我认为：不管学习什么东西，一定要有属于自己的“学习方法”和善于“对事物的总结”。</p>
+                                <p>“学到老活到老”我常常和身边的人如此戏谑。学习是永无止境的，作为程序员的我们更是如此。</p>
+                                <p>学习如果没有目的性。那么最后得到的可能只是自欺欺人的“我很努力”</p>
+                                <p>“谦卑的心态来学习，秉持利他之心来帮助他人。”是我学习路上导航标。</p>
+                                <p>&nbsp&nbsp感谢那些曾经帮助过我的人，因为有你们我才能磕磕绊绊走到今天。</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tab">
+                                <a href="#">About Blog</a>
+                            </div>
+                            <div class="intropra">
+                                <p>&nbsp&nbsp建立这个博客主要目的是分享我在学习生活中的点滴。</p>
+                                <p>学习之路必定是孤独的。但我希望能借此记录下我身后的每一个脚印。</p>
+                                <p>同时，我希望这里能成为我整理知识的平台，助我在这一路上沉淀、成长。</p>
+                                <p>当然，我也很期待自己在这里分享的知识能被越来越多的人认可。</p>
+                                <p>&nbsp&nbsp我更期待，在此时此地此处与我相遇的你会是在何时何地何处……</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tab">
+                                <a href="#">About Hobby</a>
+                            </div>
+                            <div class="intropra">
+                                <p>&nbsp&nbspemmm平时兴趣蛮多的</p>
+                                <p>游戏，比如LOL、碧蓝航线、空洞骑士、黑魂系列、太吾绘卷……</p>
+                                <p>运动，跑步、乒乓、羽毛球……感觉都还可以，不过本人很菜就是了- -</p>
+                                <p>偶尔也会读读书的~除了专业书就数心理学类书籍、散文集、杂记以及哲学类书籍。</p>
+                                <p>&nbsp&nbsp这里我必须要推荐一本杂记——周国平先生的《愿生命从容》！</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tab">
+                                <a href="#">Commend For Me</a>
+                            </div>
+                            <div class="intropra">
+                                <p>&nbsp&nbsp希望你能在这里也把你钟意的书也推荐给我~</p>
+                                <div class="book">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>书名</th>
+                            
+                                                <th>作者</th>
+                            
+                                                <th>理由</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        
+                                        <tbody id="table">
+                                            <tr>
+                                                <td>书名1</td>
+                                                <td>作者1</td>
+                                                <td>理由1</td>
+                                                <td><a href="javascript:void(0)" class="remove" onclick="deltr(this)">删除</a></td>
+                                                <td><a href="javascript:void(0)" class="change" onclick="changetr(this)">编辑</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>书名2</td>
+                                                <td>作者2</td>
+                                                <td>理由2</td>
+                                                <td><a href="javascript:void(0)" class="remove" onclick="deltr(this)">删除</a></td>
+                                                <td><a href="javascript:void(0)" class="change" onclick="changetr(this)">编辑</a></td>
+                                            </tr>        
+                                        </tbody>
+                                    </table>
+                                    <a href="javascript:void(0)" id="add" onclick="addtr()">增加一行</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </main>
+
+
+        </div>
+
+            <iframe class="foot"  src="foot.html" frameborder="0" width="100%" height="30px"></iframe>
+
+
+
+    </div>
+
+
+
+    <img class="footer-img" id="gotoTop" src="./images/backtop.png" >
+</body>
+    <script>
+        $("#my-slider").camRollSlider();
+    </script>
+    <style>
+        .foot{
+            position: relative;
+            bottom: 0;
+            margin-top: 10px;
+        }
+    @media only screen and (max-width: 300px){
+        .mhiden{
+            display: none;
+        }
+    }
+    @media only screen and (max-width: 650px){
+        .siderl{
+            display: none;
+        }
+    }
+    </style>
+<script>
+    var winwidth;
+    var siderl=document.getElementById("siderl");
+    var blockr=document.getElementById("blockr");
+    var widthl=siderl.offsetWidth;
+    winwidth=$(window).width();
+    if(winwidth > 650){
+        blockr.style.left=widthl+20+"px";
+        blockr.style.width='65%';
+        siderl.style.height=blockr.offsetHeight;
+    }
+    window.addEventListener('resize',()=>{  
+        winwidth=document.documentElement.clientWidth ;
+        widthl=siderl.offsetWidth;
+        if(winwidth > 650){
+            siderl.style.height=blockr.offsetHeight;
+            show();
+    }
+    if(winwidth < 650){
+        blockr.style.left=20+"px";
+        blockr.style.width='90%';
+    }
+} )
+    function show(){
+        blockr.style.left=widthl+20+"px";
+        blockr.style.width='65%';
+}
+</script>
+<script src="./js/gototop.js"></script>
+<script src="./js/login.js"></script>
+    <script>
+        var j=2;
+        function addtr(){
+            var tableobj =document.getElementById("table");
+            var trobj =document.createElement("tr");
+            var tdobj = document.createElement("td");
+            j++;
+            for(var i=0;i<5;i++)
+            {
+                
+                var tdobj=document.createElement("td");             
+                if(i==0){
+                    var txt1=document.createTextNode("书名"+j);
+                    tdobj.appendChild(txt1);
+                }
+                if(i==1){
+                    var txt2=document.createTextNode("作者"+j);
+                    tdobj.appendChild(txt2);
+                }
+                if(i==2){
+                    var txt3=document.createTextNode("理由"+j);
+                    tdobj.appendChild(txt3);
+                }
+                if(i==3){
+                    tdobj.innerHTML="<a href='javascript:void(0)' class='remove' onclick='deltr(this)'>删除</a>";
+                }
+                if(i==4){
+                    tdobj.innerHTML="<a href='javascript:void(0)' class='change' onclick='changetr(this)'>编辑</a>";
+                }
+                trobj.appendChild(tdobj);
+            }
+            tableobj.appendChild(trobj);
+        }
+        function deltr(obj){
+            var tableobj =obj.parentNode.parentNode.parentNode;
+            var trobj =obj.parentNode.parentNode;
+            tableobj.removeChild(trobj);
+            j--;
+        }
+        function changetr(obj){
+            var tr = obj.parentNode.parentNode;
+            var tds = tr.getElementsByTagName('td');
+            for(let i = 0;i<tds.length - 1;i++){
+                tds[i].index = i; 
+                tds[i].onclick = function(event){
+                    var evt = event||window.event;
+                    if(evt.target.tagName.toLowerCase() == "td"){
+                        var input1 = document.createElement('input');
+                        input1.value = this.innerHTML;
+                        tds[this.index].innerHTML = ''; 
+                        tds[this.index].appendChild(input1); 
+                        input1.focus(); 
+                    }
+                    input1.onblur = function(){
+                        this.parentNode.innerHTML = this.value;
+                        tds[i].onclick = null;
+                    }
+
+                }
+            }
+        }   
+    </script>
+</html>

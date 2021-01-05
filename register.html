@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="个人博客,前端,HTML,css,JavaScript">
+<meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0" />
+<title>注册</title>
+<link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="./css/font/webfont-2/iconfont.css">
+<link rel="stylesheet" href="./css/log-reg.css">
+<style>
+    .iconfont{
+        font-size: 20px;
+    }
+    .bg{
+        height: 1200px;
+        background-image: url(./css/images/login7.jpg);
+    }
+    .b-box {
+        margin-top: 100px;
+        padding: 20px 50px;
+        width: 600px;
+        height: 900px;
+    }
+    .b-box h2{
+        color: white;
+    }
+    textarea{
+        vertical-align:top;
+        width: 300px;
+        height: 100px;
+    }
+    .input-text{
+        color: white;
+    }
+    input[type="radio"]+span{
+        color: white;
+    }
+    .input-button+span{
+        color: white;
+        font-size: 10px;
+    }
+    .input-button+span:hover{
+        text-decoration: underline;
+    }
+    @media only screen and (max-width: 500px){
+        .b-box{
+            width: 300px;
+            padding: 20px;
+        }
+        textarea{
+            width: 200px;
+        }
+    }
+    @media only screen and (min-height: 980px){
+        .bg{
+            height: 1300px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="bg">
+
+        <div class="b-box">
+            <h2>注册</h2>
+            <div class="input-box">
+                <form action="login.html" method="post" name="log-check" onsubmit="return check()">
+                    <div class="input-text">
+                        <span class="iconfont icon-wode"></span>
+                        <input type="text" name="user" id="user" placeholder="Username" autocomplete="on" >
+                    </div>
+                    <div class="input-text">
+                        <span class="iconfont icon-yanzhengma"></span>
+                        <input type="password" name="password" id="pass1" placeholder="Password" autocomplete="off">
+                    </div>
+                    <div class="input-text">
+                        <span class="iconfont icon-yanzhengma"></span>
+                        <input type="password" name="password" id="pass2" placeholder="Password" autocomplete="off">
+                    </div>
+                    <div class="input-text">
+                        <span class="iconfont icon-dizhi"></span>
+                        <input type="text" name="address" id="address" placeholder="Address" autocomplete="on">
+                    </div>
+                    <div class="input-text">
+                        <span class="iconfont icon-shengri"></span>
+                        <input type="date" name="birth" id="birth" autocomplete="on">
+                    </div>
+                    <div class="input-text">
+                        <span class="iconfont icon-gender"></span>
+                        <!-- <input type="radio" name="sex" id="male" value="male" autocomplete="on"><span>男</span>
+                        <input type="radio" name="sex" id="female" value="female" autocomplete="on"><span>女</span> -->
+                        <select>
+                            <option name="sex" id="male" value="male">男</option>
+                            <option name="sex" id="female" value="female">女</option>
+                            <option name="sex" id="mystery" value="mystery">神秘人</option>
+                        </select>
+                    </div>
+                    <div class="input-text">
+                        <span class="iconfont icon-aihao"></span>
+                        <textarea style="resize: none;" name="hobby"  cols="20" rows="20" placeholder="把你的爱好写在这里..."></textarea>
+                    </div>
+                    <div class="input-text">
+                        <span class="iconfont icon-youxiang"></span>
+                        <input type="text" name="email" id="email" placeholder="Email" autocomplete="on">
+                    </div>
+                    <div class="input-text">
+                        <span class="iconfont icon-shouji"></span>
+                        <input type="text" name="phone" id="phone" placeholder="Phone" autocomplete="on">
+                    </div>
+                    <div class="input-text">
+                        <span class="iconfont icon-zuopin"></span>
+                        <textarea name="introduction"  cols="30" rows="30" placeholder="把你的介绍写在这里..."></textarea>
+                    </div>
+                    <input type="submit" value="LOGIN" class="input-button"><a href="javascript:void(0);"></a></input>
+                    <!-- <div class="register"><a href="./login.html"><p class="register-txt">LOGIN</p></a></div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+<script>
+    function check(){
+        var x_user=document.getElementById("user").value;
+        var x_email=document.getElementById("email").value;
+        var phone=document.getElementById("phone").value;
+        var x_phone=phone.length
+        var x_pass=document.getElementById("pass1").value;
+        var y_pass=document.getElementById("pass2").value;
+        var name="^[a-zA-z].*";
+        var reg =/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+        var re1 = new RegExp(name);
+        var re2 = new RegExp(reg);
+        if(x_user.length<6||x_user.length>10){
+            alert("请输入6-10位的用户名！");
+            return false;
+        }
+       	else if(!re1.test(x_user)){
+       		 alert("请输入以字母开头的用户名！");
+       		 return false;
+        }
+        else if(!re2.test(x_email)){
+            alert("请输入正确的邮箱，如example@ex.com！");
+            return false;
+        }
+        else if(x_pass==""||y_pass==""){
+            alert("密码不能为空！");
+            return false; 
+        }
+        else if(x_pass!=y_pass){
+            alert("两次输入密码不一致，请重新输入！");
+            return false;
+        }
+        else if(x_phone!=11){
+            alert("请输入正确的11位手机号");
+            return false;
+        }
+        else{
+            var storage=window.localStorage;
+            if(!storage){
+            alert("浏览器版本过低，不支持注册！请使用ie8以上的版本~");
+            }
+            user=x_user;
+            psw=x_pass;
+            storage["username"]=user;
+            storage["pwd"]=psw;
+            window.location.href="./login.html";
+            return ture;
+        } 
+
+    }
+</script>
+<script>
+    
+</script>
+</body>
+</html>

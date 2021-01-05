@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"> 
+    <meta content="个人博客,前端,HTML,css,JavaScript">
+    <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0" />
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/font/webfont-2/iconfont.css">
+    <link rel="stylesheet" href="./css/log-reg.css">
+    <style>
+
+    .bg{
+        height: 812px;
+        background-image: url(./css/images/login1.png);
+    }
+    .b-box {
+        margin-top: 200px;
+        padding: 20px 50px;
+        width: 230px;
+        height: 230px;
+    }
+    .b-box h5{
+        color: white;
+    }
+    @media only screen and (max-width: 300px){
+        .b-box{
+            padding: 20px;
+        }
+    }
+    @media only screen and (min-height: 980px){
+        .bg{
+            height: 1300px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="bg">
+
+        <div class="b-box">
+            <h5>登录</h5>
+            <div class="input-box">
+                <form  method="post" name="log-check">
+                    <div class="input-text">
+                        <span class="iconfont icon-wode"></span>
+                        <input id="username" type="text" placeholder="Username"/>
+                    </div>
+                    <div class="input-text">
+                        <span class="iconfont icon-yanzhengma"></span>
+                        <input id="pwd" type="password" placeholder="Password"/>
+                    </div>
+                    <button type="button" class="input-button" onclick="login()"><a id="login" href="javascript:void(0);">LOGIN</a></button>
+                    <div class="register"><a href="./register.html"><p class="register-txt">Sign in</p></a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var user=getCookie("username");
+    window.onload=function(){
+        if(user!=""){
+            window.location.href="./index.html";
+        }
+    }
+    function getCookie(cname){
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+        }
+        return "";
+    }
+    function setCookie(cname,cvalue,exdays){
+            var d = new Date();
+            d.setTime(d.getTime()+(exdays*24*60*60*1000));
+            var expires = "expires="+d.toGMTString();
+            document.cookie = cname+"="+cvalue+"; "+expires;
+        }
+
+    function login(){
+        var storage=window.localStorage;
+        
+        if(storage.length!=0){
+            var check1=storage.getItem("username");
+            var check2=storage.getItem("pwd");
+            var user_x=document.getElementById("username");
+            var user_psw=document.getElementById("pwd");
+            if(user_x.value!=check1){
+                alert("用户名输入错误！");
+                return false;
+            }
+            else if(user_psw.value!=check2){
+                alert("密码输入错误！");
+                return false;
+            }
+            else{
+                setCookie("username",user_x.value,30);
+                window.location.href="./index.html";
+            }
+        }
+        else{
+            alert("新用户请先注册！");
+            return false;
+        }
+    }
+</script>

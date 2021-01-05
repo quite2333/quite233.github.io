@@ -1,0 +1,13 @@
+<html><body>
+    <meta charset="utf-8"> 
+    <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+
+    <script src="js/ejs.js"></script>
+    <div id="main">  </div>
+    <script>
+       var post = {title:'我的博文',content:'博文内容',links:['<a href="./posts/32"> 相关文章一<a>','...']};
+        $.get("./tpl/acm.tpl", function(result){
+          var html = ejs.compile(result)(post);
+          $("#main").html(html);
+        });
+    </script></body></html>
