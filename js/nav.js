@@ -1,4 +1,4 @@
-$.get("./head.tpl", function(result){      
+$.get("./tpl/head.tpl", function(result){      
     $("#header").html(result);
     $("#my-slider").camRollSlider();
 });
