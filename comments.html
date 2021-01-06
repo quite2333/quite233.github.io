@@ -1,0 +1,108 @@
+
+<html>
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>给我留言</title>
+<link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="./css/font/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/font/Roboto-Condensed/Roboto-Condensed.css">
+<link rel="stylesheet" href="./css/font/fontello-f75c85fd/css/log.css">
+<link rel="stylesheet" href="./css/font/webfont-2/iconfont.css">
+<link rel="stylesheet" href="./css/general.css">
+<link rel="stylesheet" href="./css/nav.css">
+<link rel="stylesheet" href="./css/foot.css">
+<link rel="stylesheet" type="text/css" href="./css/camroll_slider.css">
+<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./js/camroll_slider.js"></script>
+<script type="text/javascript" src="./js/nav.js"></script>
+<script src="./js/gototop.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+</head>
+
+<body>
+      <!-- 导航栏 -->
+      <div id="header">
+
+      </div>
+  <div class="cgap">
+      <div class="cgap1"></div>
+      <div class="cgap2">
+          给我留言
+      </div>
+      <div class="cgap1">
+      </div>
+    </div>
+    <div class="container">
+      <div class="blockright">
+          <div class="tab">
+              <a href="#">Leave a commment</a>
+          </div>
+
+          <div id="gitalk-container"></div>
+    </div>
+  </div>
+
+ </body>
+ <style>
+    .container{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .blockright{
+        left: 20px;
+        position: relative;
+        width: auto;
+        min-width: 400px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        height: auto;
+        min-height: 600px;
+        box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    }
+    .tab{
+        display:inline-block;
+        width: 90%;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ddd ;
+    }
+    .tab a{
+        border-color: transparent transparent;
+        color: #03a9f5;
+        font-family:"Roboto-Condensed";
+        position: relative;
+        padding: 5px;
+        margin-bottom: -5px;
+        text-decoration: none;
+    }
+    .tab a::after{
+        background: #03a9f5;
+        bottom: -1px;
+        content: "";
+        height: 2px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        z-index: 999;
+    }
+ </style>
+<script>
+var gitalk = new Gitalk({
+  clientID: '2b2e1793e4ccf4f72f3e', 
+ 
+  clientSecret: '892ec11403237f6f87d8d8263ba55c39bfe78140', 
+ 
+  repo: 'blogtalk',
+  owner: 'quite2333',
+  admin: ['quite2333'],
+  id: location.href,      
+  distractionFreeMode: false  
+})
+gitalk.render('gitalk-container')
+</script>
+

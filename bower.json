@@ -1,0 +1,20 @@
+{
+  "name": "quite2333",
+  "homepage": "https://github.com/quite2333/quite233.github.io",
+  "authors": [
+    "quite2333 <1186585934@qq.com>"
+  ],
+  "description": "blog",
+  "main": "",
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}

@@ -6,86 +6,30 @@
 <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0" />
 <title>acm</title> 
 <link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="./css/font/font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./css/font/Roboto-Condensed/Roboto-Condensed.css">
 <link rel="stylesheet" href="./css/font/fontello-f75c85fd/css/log.css">
 <link rel="stylesheet" href="./css/font/webfont-2/iconfont.css">
 <link rel="stylesheet" href="./css/general.css">
 <link rel="stylesheet" href="./css/nav.css">
+<link rel="stylesheet" href="./css/foot.css">
 <link rel="stylesheet" type="text/css" href="./css/camroll_slider.css">
+<link rel="stylesheet" href="./css/acm.css">
 <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="./js/camroll_slider.js"></script>
 <script type="text/javascript" src="./js/ejs.js"></script>
-<link rel="stylesheet" href="./css/acm.css">
+<script src="./js/nav.js"></script>
+<script src="./js/gototop.js"></script>
+<script src="./js/login.js"></script>
 
 <base href="#">
 </head>
-    <header>
-        <!-- 导航栏 -->
-        <nav id="navi">
-            <ul class="main">
-            <li class="title">
-                <a><i class="iconfont icon-gengduo" aria-hidden="true"></i>菜单</a>
-                <ul class="drop menu">
-                <li><a  href="./index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;首页</a></li>
-                <li><a href="./introduction.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;个人简介</a></li>
-                <li><a href="./txt-list.html"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp;文章列表</a></li>
-                <li><a href="./life.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;生活轨迹</a></li>
-                <li><a href="./study-res.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;学习资源</a></li>
-                </ul>
-            </li>
-            <li class="title mhiden">
-                <a href="./login.html"><i class="icon icon-login" aria-hidden="true"></i>登录</a>
-            </li>
-            <li class="title mhiden">
-                <a href="javascript:void(0)" onclick="logout()"><i class="icon icon-register" aria-hidden="true"></i>登出</a>
-            </li>
-            <li class="user_txt">
-                <h4 id="user">Hi!</h4>
-            </li>
-            </ul>
-        </nav>
-        <!-- 轮播图 -->
-        <div name="bg-scoll">
-            <div id="my-slider" class="crs-wrap">
-                <div class="crs-screen">
-                    <div class="crs-screen-roll">
-                    <div class="crs-screen-item" style="background-image: url('./css/images/1.jpg')">
-                        <!-- <div class="crs-screen-item-content"><h1>learn more...</h1></div> -->
-                    </div>
-                    <div class="crs-screen-item" style="background-image: url('./css/images/2.jpg')">
-                        <!-- <div class="crs-screen-item-content"><h1>learn more...</h1></div> -->
-                    </div>
-                    <div class="crs-screen-item" style="background-image: url('./css/images/3.jpg')">
-                        <!-- <div class="crs-screen-item-content"><h1>learn more...</h1></div> -->
-                    </div>
-                    <div class="crs-screen-item" style="background-image: url('./css/images/4.jpg')">
-                        <!-- <div class="crs-screen-item-content"><h1>learn more...</h1></div> -->
-                    </div>
-                    <div class="crs-screen-item" style="background-image: url('./css/images/5.jpg')">
-                        <!-- <div class="crs-screen-item-content"><h1>learn more...</h1></div> -->
-                    </div>
-                    <div class="crs-screen-item" style="background-image: url('./css/images/6.jpg')">
-                        <!-- <div class="crs-screen-item-content"><h1>learn more...</h1></div> -->
-                    </div>
-                    </div>
-                </div>
-                <div class="crs-bar">
-                    <div class="crs-bar-roll-current"></div>
-                    <div class="crs-bar-roll-wrap">
-                    <div class="crs-bar-roll">
-                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/1.jpg')"></div>
-                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/2.jpg')"></div>
-                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/3.jpg')"></div>
-                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/4.jpg')"></div>
-                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/5.jpg')"></div>
-                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/6.jpg')"></div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>   
-    </header>
+
 <body >
+    <!-- 导航栏 -->
+    <div id="header">
+
+    </div>
     <!-- 内容栏 -->
     <div class="cgap">
         <div class="cgap1">
@@ -102,16 +46,16 @@
                 <div id="art">
                     
                 </div>
-                <pre><code><code><div id="code">
-                </div></code></code></pre>
-                </div>
+                <pre><code><code><div id="code"></div></code></code></pre>
                 <div id="declare">
 
                 </div>
+        </div>
+
             </article>
         </div>
     </div>
-    <iframe class="foot"  src="foot.html" frameborder="0" width="100%" height="30px"></iframe>
+    <iframe class="foot"  src="foot.html" frameborder="0" width="100%" height="30px" scrolling="no"></iframe>
  
 
     <img class="footer-img" id="gotoTop" src="./images/backtop.png" >
@@ -154,14 +98,14 @@
                     declaretxt=data.declare;
                     $.ajax({
                         type: "GET",
-                        url: urltxt,
+                        url: urltxt+"?v=1.2",
                         dataType: "text",
                         success: function (codetxt) {
                             answercode.innerHTML=codetxt;
-                            declare.innerHTML='<p>'+declare[0]+"<a href=\'"+declare[1]+"\'>"+declare[2]+"</a></p>";
+                            declare.innerHTML='<p>'+declaretxt[0]+"<a href=\'"+declaretxt[1]+"\'>"+declaretxt[2]+"</a></p>";
                         }
                     });
-                    $.get(urltpl, function(result){
+                    $.get(urltpl+"?v=1.2.1", function(result){
                         var ht = ejs.compile(result)(data);
                         $("#art").html(ht);
                     });
@@ -169,16 +113,11 @@
 
                 };
             }
-            xml.open("GET",urljson,true);
+            xml.open("GET",urljson+"?v=1.2.1",true);
             xml.send();
     });
 </script>
 <style>
-        .foot{
-            position: absolute;
-            bottom: 0;
-            margin-top: 10px;
-        }
 @media only screen and (max-width: 300px){
     .mhiden{
         display: none;
@@ -186,7 +125,5 @@
 }
 
 </style>
-<script src="./js/gototop.js"></script>
-<script src="./js/login.js"></script>
 
 </html>

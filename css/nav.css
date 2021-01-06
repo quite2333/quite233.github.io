@@ -15,7 +15,7 @@
     position: relative;
     padding: 0 2%;
 }
-li>a {
+li a {
     text-decoration: none;
     color: black;
     display: block;
@@ -23,6 +23,7 @@ li>a {
     transition: background-color .5s ease-in-out;
     padding:0 10px;
 }
+
 nav a:hover {
     /* 矢车菊的蓝色 */
     background-color: 	#6495ED; 
@@ -32,6 +33,9 @@ nav a:hover {
     background-color: 	#F0F8FF;    
     opacity: 0;
     transform-origin: top center
+}
+.drop{
+    display: none;
 }
 .drop li a {
     padding: 10px 0
@@ -46,6 +50,7 @@ nav a:hover {
     border-radius: 15px;
 
 }
+
 .main li:hover .menu li:first-of-type {
 animation: menu .3s ease-in-out forwards;
 animation-delay: .3s
