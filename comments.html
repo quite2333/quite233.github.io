@@ -100,7 +100,7 @@ var gitalk = new Gitalk({
   repo: 'blogtalk',
   owner: 'quite2333',
   admin: ['quite2333'],
-  id: decodeURI(location.href),      
+  id: decodeURI(window.location.pathname),      
   distractionFreeMode: false  
 })
 gitalk.render('gitalk-container')
