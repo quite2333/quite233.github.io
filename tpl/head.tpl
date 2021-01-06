@@ -7,7 +7,7 @@
             <li><a href="./index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;首页</a></li>
             <li><a href="./introduction.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;个人简介</a></li>
             <li><a href="./txt-list.html"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp;文章列表</a></li>
-            <li><a href="./life.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;给我留言</a></li>
+            <li><a href="./comments.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;给我留言</a></li>
             <li><a href="./study-res.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;学习资源</a></li>
             </ul>
         </li>
