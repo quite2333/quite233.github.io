@@ -17,7 +17,7 @@ $.get("./tpl/head.tpl", function(result){
     
      
       
-},1000);
+},100);
 
 
 
