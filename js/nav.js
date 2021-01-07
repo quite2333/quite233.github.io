@@ -30,7 +30,7 @@ $.get("./tpl/head.tpl", function(result){
     
       }
       $("#my-slider").camRollSlider();
-},100);
+},500);
 
 
 
