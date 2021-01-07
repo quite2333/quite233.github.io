@@ -15,7 +15,7 @@ $.get("./tpl/head.tpl", function(result){
 
         
     
-      }
+     
       
 },1000);
 
@@ -38,6 +38,7 @@ $("#my-slider").camRollSlider();
         document.cookie="username="+user+";expires=Thu, 01 Jan 1970 00:00:00 GMT";
         }
         location.reload();
+         }
 var timeId;
 function show(){
   window.clearInterval(timeId);
