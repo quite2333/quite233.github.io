@@ -16,13 +16,14 @@ $.get("./tpl/head.tpl", function(result){
         
     
       }
-      $("#my-slider").camRollSlider();
+      
 },1000);
 
 
 
     
 });
+$("#my-slider").camRollSlider();
     function getCookie(cname){
         var name = cname + "=";
         var ca = document.cookie.split(';');
