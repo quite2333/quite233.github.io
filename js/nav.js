@@ -12,6 +12,17 @@ $.get("./tpl/head.tpl", function(result){
         utxt.innerHTML="您还未登录，请先登录!";
     }
     
+
+        
+    
+      }
+      $("#my-slider").camRollSlider();
+},1000);
+
+
+
+    
+});
     function getCookie(cname){
         var name = cname + "=";
         var ca = document.cookie.split(';');
@@ -26,16 +37,6 @@ $.get("./tpl/head.tpl", function(result){
         document.cookie="username="+user+";expires=Thu, 01 Jan 1970 00:00:00 GMT";
         }
         location.reload();
-        
-    
-      }
-      $("#my-slider").camRollSlider();
-},1000);
-
-
-
-    
-});
 var timeId;
 function show(){
   window.clearInterval(timeId);
