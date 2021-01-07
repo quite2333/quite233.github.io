@@ -3,6 +3,11 @@
 <head> 
 <meta charset="utf-8"> 
 <meta content="个人博客,前端,HTML,css,JavaScript">
+<meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+<meta http-equiv="expires" content="-1">
 <title>文章列表</title> 
 <link rel="stylesheet" href="./css/normalize.css">
 <link rel="stylesheet" href="./css/font/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -11,71 +16,21 @@
 <link rel="stylesheet" href="./css/font/webfont-2/iconfont.css">
 <link rel="stylesheet" href="./css/general.css">
 <link rel="stylesheet" href="./css/nav.css">
+<link rel="stylesheet" href="./css/foot.css">
 <link rel="stylesheet" type="text/css" href="./css/camroll_slider.css">
 <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="./js/camroll_slider.js"></script>
+<script src="./js/nav.js"></script>
+<script src="./js/gototop.js"></script>
+
 <base href="#">
 </head>
 
 <body >
     <!-- 导航栏 -->
-    <header>
-        <nav id="navi">
-            <ul class="main">
-            <li class="title"><a><i class="iconfont icon-gengduo" aria-hidden="true"></i>菜单</a>
-                <ul class="drop menu">
-                <li><a  href="./index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;首页</a></li>
-                <li><a href="./introduction.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;个人简介</a></li>
-                <li><a href="./txt-list.html"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp;文章列表</a></li>
-                <li><a href="./life.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;生活轨迹</a></li>
-                <li><a href="./study-res.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;学习资源</a></li>
-                </ul>
-            </li>
-            <li class="title mhiden">
-                <a href="./login.html"><i class="icon icon-login" aria-hidden="true"></i>登录</a>
-            </li>
-            <li class="title mhiden">
-                <a href="javascript:void(0)" onclick="logout()"><i class="icon icon-register" aria-hidden="true"></i>登出</a>
-            </li>
-            <li class="user_txt">
-                <h4 id="user"></h4>
-            </li>
-            </ul>
-        </nav>
-        <div name="bg-scoll">
-            <div id="my-slider" class="crs-wrap">
-                <div class="crs-screen">
-                    <div class="crs-screen-roll">
-                    <div class="crs-screen-item" style="background-image: url('./css/images/1.jpg')">
-                    </div>
-                    <div class="crs-screen-item" style="background-image: url('./css/images/2.jpg')">
-                    </div>
-                    <div class="crs-screen-item" style="background-image: url('./css/images/3.jpg')">
-                    </div>
-                    <div class="crs-screen-item" style="background-image: url('./css/images/4.jpg')">
-                    </div>
-                    <div class="crs-screen-item" style="background-image: url('./css/images/5.jpg')">
-                    </div>
-                    <div class="crs-screen-item" style="background-image: url('./css/images/6.jpg')">
-                    </div>
-                    </div>
-                </div>
-                <div class="crs-bar">
-                    <div class="crs-bar-roll-current"></div>
-                    <div class="crs-bar-roll-wrap">
-                    <div class="crs-bar-roll">
-                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/1.jpg')"></div>
-                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/2.jpg')"></div>
-                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/3.jpg')"></div>
-                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/4.jpg')"></div>
-                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/5.jpg')"></div>
-                        <div class="crs-bar-roll-item" style="background-image: url('./css/images/6.jpg')"></div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>    
-    </header>
+    <div id="header">
+
+    </div>
     <!-- 内容栏 -->
     <div class="cgap">
         <div class="cgap1">
@@ -92,10 +47,10 @@
         <div class="little-container">
            
             <div class="post">
-              <div class="image"><a href="text.html"><img src="./css/images/blog1.jpg" alt="" class="img-responsive"></a></div>
-              <h3><a href="A^B.html">HDU2035 人见人爱A^B(快速幂)</a></h3>
-              <p class="post__intro">求A^B的最后三位数表示的整数。说明：A^B的含义是“A的B次方”。</p>
-              <p class="read-more"><a href="text.html" class="btn btn-ghost">Continue reading     </a></p>
+              <div class="image"><a href="javascript:void(0);" onclick="setjson('acm1')"><img src="./css/images/blog1.jpg" alt="" class="img-responsive"></a></div>
+              <h3><a href="javascript:void(0);" onclick="setjson('acm1')">Tempter of the Bone（详解）</a></h3>
+              <p class="post__intro">The doggie found a bone in an ancient maze, which fascinated him a lot. However, when he picked it up, the maze began to shake, and the doggie could feel the ground sinking. He realized that the bone was a trap, and he tried desperately to get out of this maze.</p>
+              <p class="read-more"><a href="javascript:void(0);" class="btn btn-ghost" onclick="setjson('acm1')">Continue reading     </a></p>
             </div>
         </div>
 
@@ -119,17 +74,20 @@
 
     </div>
     
-    <iframe class="foot"  src="foot.html" frameborder="0" width="100%" height="30px"></iframe>
+    <iframe class="foot"  src="foot.html" frameborder="0" width="100%" height="30px" scrolling="no"></iframe>
     <img class="footer-img" id="gotoTop" src="./images/backtop.png" >
 
 </body>
-
-<style>
-    .foot{
-        position: absolute;
-        bottom: 0;
-        margin-top: 10px;
+<script>
+    function setjson(url){
+        sessionStorage.setItem("pagejson","json/"+url+'.json');
+        setTimeout(function(){
+            window.location.href="acm.html";
+        },200);
+        
     }
+</script>
+<style>
     .container{
         clear: both;
         display: flex;
@@ -167,9 +125,4 @@
     color: #999999;
     }
 </style>
-<script src="./js/gototop.js"></script>
-<script src="./js/login.js"></script>
-<script>
-    $("#my-slider").camRollSlider();
-</script>
 </html>

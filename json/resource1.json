@@ -1,0 +1,12 @@
+{
+    "title":"学习资源分享一",
+    "tab":"标签：学习资源",
+    "num":"4",
+    "commend":[["3","https://app.diagrams.net/","这是一个完全免费、无需科学上网的在线流程图制作网站(除了是英文网站外，我直接吹爆！)","都1202年了不会还有人用word画图吧？？？"],
+    ["2","https://www.pinterest.com/","这是我平常搜集图片素材的网站~虽然实用性方面没有上面的网站的硬核，但是当你发现百度图片都是乐色的时候0.0……"],
+    ["3","https://www.scientificamerican.com/","这是一个全球性质的科技杂志网址，虽然部分内容是收费的……但是谁让那是nature上的呢- -","关注科技时政的小伙伴可以考虑一下~"],
+    ["4","http://daoshidianping.com/","这个网址就很硬核了——里面罗纳了国内绝大多数高校的导师点评！","内部资料请勿泄露.jpg","如果你是考研党，那我相信你一定会需要它！"]],
+    "imgurls":["images/resource1/1.png","images/resource1/2.png","images/resource1/3.png","images/resource1/4.png"],
+    "declare":["本文为原创内容，如需转载请注明作者","https://quite2333.github.io/quite233.github.io/","quite2333"],
+    "urltpl":"tpl/resource.tpl"
+}

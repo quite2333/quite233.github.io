@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<meta content="个人博客,前端,HTML,css,JavaScript">
+<meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0" />
+<title>文章列表</title> 
+<link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="./css/font/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/font/Roboto-Condensed/Roboto-Condensed.css">
+<link rel="stylesheet" href="./css/font/fontello-f75c85fd/css/log.css">
+<link rel="stylesheet" href="./css/font/webfont-2/iconfont.css">
+<link rel="stylesheet" href="./css/general.css">
+<link rel="stylesheet" href="./css/nav.css">
+<link rel="stylesheet" href="./css/foot.css">
+<link rel="stylesheet" type="text/css" href="./css/camroll_slider.css">
+<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="./js/camroll_slider.js"></script>
+<script src="./js/nav.js"></script>
+<script src="./js/gototop.js"></script>
+<base href="#">
+</head>
+
+<body >
+    <!-- 导航栏 -->
+    <div id="header">
+
+    </div>
+    <!-- 内容栏 -->
+    <div class="cgap">
+        <div class="cgap1">
+        </div>
+        <div class="cgap2">
+            文章列表
+        </div>
+        <div class="cgap1">
+        </div>
+    </div>
+    
+    <div class="container">
+        
+        <div class="little-container">
+           
+            <div class="post">
+              <div class="image"><a href="javascript:void(0);" onclick="setjson('resource1')"><img src="./css/images/blog2.jpg" alt="" class="img-responsive"></a></div>
+              <h3><a href="javascript:void(0);" onclick="setjson('resource1')">学习资源分享一</a></h3>
+              <p class="post__intro">本期主要推荐了四个使用网址，涉及流程图制作、图片素材、科技新闻、考研等相关内容~</p>
+              <p class="read-more"><a href="javascript:void(0);" class="btn btn-ghost" onclick="setjson('resource1')">Continue reading     </a></p>
+            </div>
+        </div>
+    </div>
+    
+    <iframe class="foot"  src="foot.html" frameborder="0" width="100%" height="30px" scrolling="no"></iframe>
+    <img class="footer-img" id="gotoTop" src="./images/backtop.png" >
+
+</body>
+<script>
+    function setjson(url){
+        sessionStorage.setItem("pagejson","json/"+url+'.json');
+        setTimeout(function(){
+            window.location.href="resource.html";
+        },200);
+    }
+</script>
+<style>
+    .container{
+        clear: both;
+        display: flex;
+        flex-direction: column;
+        text-align: center!important;
+    }
+    .read-more{
+        margin-top: 10px;
+    }
+
+    .little-container a:link{
+        color:#ef5285;
+    }
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .post {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    .post .image {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    }
+    .img-responsive{
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    .post .post__intro {
+    font-size: 15px;
+    color: #999999;
+    }
+</style>
+</html>

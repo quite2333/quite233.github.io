@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<meta content="个人博客,前端,HTML,css,JavaScript">
+<meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0" />
+<title>acm</title> 
+<link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="./css/font/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/font/Roboto-Condensed/Roboto-Condensed.css">
+<link rel="stylesheet" href="./css/font/fontello-f75c85fd/css/log.css">
+<link rel="stylesheet" href="./css/font/webfont-2/iconfont.css">
+<link rel="stylesheet" href="./css/general.css">
+<link rel="stylesheet" href="./css/nav.css">
+<link rel="stylesheet" href="./css/foot.css">
+<link rel="stylesheet" type="text/css" href="./css/camroll_slider.css">
+<link rel="stylesheet" href="./css/acm.css">
+<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+
+<script type="text/javascript" src="./js/ejs.js"></script>
+<script src="./js/nav.js"></script>
+<script src="./js/gototop.js"></script>
+<script type="text/javascript" src="./js/camroll_slider.js"></script>
+
+<base href="#">
+</head>
+<script>
+
+</script>
+<body >
+    <!-- 导航栏 -->
+    <div id="header">
+
+    </div>
+    <!-- 内容栏 -->
+    <div class="cgap">
+        <div class="cgap1">
+        </div>
+        <div class="cgap2">
+        内容推荐
+        </div>
+        <div class="cgap1">
+        </div>
+    </div>
+    <div class="container">
+        <div class="vscode-body vscode-light">
+            <article >
+                <div id="art">
+                </div>
+                <div id="declare">
+                </div>
+        </div>
+
+            </article>
+        </div>
+    </div>
+    <iframe class="foot"  src="foot.html" frameborder="0" width="100%" height="30px" scrolling="no"></iframe>
+ 
+
+    <img class="footer-img" id="gotoTop" src="./images/backtop.png" >
+</body>
+<script>
+    $(function () {
+        sessionStorage.setItem("pagejson","json/resource1.json");
+        var urltpl;
+        var urljson=sessionStorage.getItem("pagejson")
+        var declare=document.getElementById("declare");
+        var data;
+        var imgurls;
+        var declaretxt;
+        var xml = new XMLHttpRequest();
+            // if(page==null){
+            //     alert("请从列表页面进入！");
+                    // return;
+            // }
+            if (window.XMLHttpRequest)
+            {
+            // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+            xml=new XMLHttpRequest();
+            }
+            else
+            {
+            // IE6, IE5 浏览器执行代码
+            xml=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xml.onreadystatechange = function () {
+                if (xml.readyState==4 && xml.status==200){
+                    var jsontxt=xml.responseText;
+                    data=JSON.parse(jsontxt);
+                    imgurls=data.imgurls;
+                    urltpl=data.urltpl;
+                    declaretxt=data.declare;
+                    $.get(urltpl+"?v=1.2.1", function(result){
+                        var ht = ejs.compile(result)(data);
+                        $("#art").html(ht);
+                        var imgs=document.getElementsByClassName("commend");
+                        for(let x=0;x<imgs.length;x++){
+                            imgs[x].src=imgurls[x];
+                        }
+                        declare.innerHTML='<p>'+declaretxt[0]+"<a href=\'"+declaretxt[1]+"\'>"+declaretxt[2]+"</a></p>";
+                    });
+                };
+            }
+            xml.open("GET",urljson+"?v=1.2.1",true);
+            xml.send();
+    });
+</script>
+<style>
+@media only screen and (max-width: 300px){
+    .mhiden{
+        display: none;
+    }
+}
+
+</style>
+
+</html>

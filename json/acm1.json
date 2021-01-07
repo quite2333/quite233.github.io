@@ -11,7 +11,7 @@
     "input":["4 4 5","S.X.","..X.","..XD","....","3 4 5","S.X.","..X.","...D","0 0 0"],
     "outputn":"2",
     "output":["NO","YES"],
-    "explann":"4",
+    "explann":"7",
     "coden":["1","4"],
     "explan":["N 行 M 列 T 时间，看这个doggie是否能在第T秒刚好到达门。S是doggie的起始位置，D是门的位置。一开始我对这个时间T有点不理解，拿题目中例2来说S走4步在D的前一个位置，再走一步到达D，题目是要在5秒刚好在D，而不是所谓的在时间T内到达就行了。",
     "这道题里涉及一些剪枝问题，如果不剪枝就会超时。（我们来把这道题的迷宫想象成一块一块的格子）。",
@@ -23,6 +23,6 @@
     "code":[["4","3 3 4","S X X",". X X","X . D"]],
     "answertxt":"3. 下面是代码",
     "answercode":"txt/acm1.txt",
-    "declare":["转载说明：本文转自CSDN作者","<a href='https://blog.csdn.net/narzisen/article/details/80545804'>","聪明绝顶的你与即将秃头的我"],
+    "declare":["转载说明：本文转自CSDN作者","https://blog.csdn.net/narzisen/article/details/80545804","聪明绝顶的你与即将秃头的我"],
     "urltpl":"tpl/acm.tpl"
 }

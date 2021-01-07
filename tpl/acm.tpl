@@ -35,26 +35,30 @@
                     </blockquote>
                 </div>
                 <div id="explain">
-                    <%let codenum=coden[0]*1;codeindex=1;numex=explann;
-                    let nowindex=0;
+                    <%let codenum=coden[0]*1;
+                    let codenindex=1;
+                    let numex=explann*1;
+                    let exindex=0;
                     if (codenum>0) {
                             let codearray=coden;
-                            nowindex=codearray[codeindex];
+                            exindex=codearray[codenindex]*1;
                         }
-                    for (let index = 0; index < 1*numex; index++) {
+                    for (let index = 0; index < numex; index++) {
                         const explantxt = explan[index];%>
                         <p><%=explantxt%></p>
-                        <%
-                        if (codenum>0&&(nowindex*1==index)) {%>
+                        <%if ((exindex==index+1)&&codenum>0) {%>
                             <div id="example">
                             <blockquote>
-                            <p><%for (let x = 1; x <= 1*code[codeindex][0]; x++) {%>
-                                <%=code[codeindex][x]%><br>
+                            <p><%for (let x = 1; x <= code[codenindex-1][0]; x++) {%>
+                                <%=code[codenindex-1][x]%><br>
                                 <%}%>
                             </p>
                             </blockquote></div>
-                            <%codeindex++;
+                            <%codenindex++;codenum--;
+                            if (codenum>0) {
+                                exindex=codearray[codenindex]*1;
                             }
+                        }
                     }%>
                     <h3><%=answertxt%></h3>
 

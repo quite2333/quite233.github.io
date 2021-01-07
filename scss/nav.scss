@@ -1,0 +1,105 @@
+#navi {
+    display: block;
+    position: relative;
+    background-color: #f0f8ff;
+    border: 2px white solid;
+    height: 3.5em;
+    width: 100%;
+    text-align: center;
+    display: flow-root;
+    z-index: 999;
+  }
+  .title {
+    line-height: 3em;
+    float: left;
+    position: relative;
+    padding: 0 2%;
+  }
+  li {
+    & > a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      font-size: 16px;
+      transition: background-color .5s ease-in-out;
+      padding: 0 10px;
+    }
+  }
+  nav {
+    a {
+      &:hover {
+        background-color: #6495ed;
+      }
+    }
+  }
+  .drop {
+    li {
+      background-color: #f0f8ff;
+      opacity: 0;
+      transform-origin: top center;
+      a {
+        padding: 10px 0;
+      }
+    }
+  }
+  .user_txt {
+    line-height: 3em;
+    float: right;
+    position: relative;
+    padding: 0 2%;
+    margin-top: 5px;
+    margin-right: 50px;
+    border-radius: 15px;
+  }
+  .main {
+    li {
+      &:hover {
+        .menu {
+          li {
+            &:first-of-type {
+              animation: menu .3s ease-in-out forwards;
+              animation-delay: .3s;
+            }
+            &:nth-of-type(2) {
+              animation: menu .3s ease-in-out forwards;
+              animation-delay: .6s;
+            }
+            &:nth-of-type(3) {
+              animation: menu .3s ease-in-out forwards;
+              animation-delay: .9s;
+            }
+            &:nth-of-type(4) {
+              animation: menu .3s ease-in-out forwards;
+              animation-delay: 1.2s;
+            }
+            &:last-of-type {
+              animation: menu .3s ease-in-out forwards;
+              animation-delay: 1.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+  @keyframes menu {
+    0% {
+        opacity: 0;
+        transform: scale(.7)
+    }
+
+    50% {
+        opacity: .5;
+        transform: scale(1.1)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+    @media only screen and (max-width: 300px){
+        .mhiden{
+            display: none;
+        }
+    }
+  
