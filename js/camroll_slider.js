@@ -75,14 +75,15 @@
 
     // initial
     current = 0;
+
     $(window).load(function(){ setSizePos();});
 
     barItem.click(function() {
       moveToItem(this);
     });
 
-    $(window).resize(function() {
-      setSizePos();
+    $( window ).resize(function() {
+        setSizePos();
     });
 
     // return jQuery chain
