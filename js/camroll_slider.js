@@ -75,9 +75,9 @@
 
     // initial
     current = 0;
-    setTimeout(function() {
+
       setSizePos();
-    }, 0);
+
 
     barItem.click(function() {
       moveToItem(this);
@@ -91,4 +91,6 @@
     return this;
   };
 }( jQuery ));
+setTimeout(function() {
 $("#my-slider").camRollSlider();
+}, 0);
