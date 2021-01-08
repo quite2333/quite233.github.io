@@ -8,7 +8,7 @@
     var barItem      = this.find('.crs-bar-roll-item');
     var barFirstItem = this.find('.crs-bar-roll-item:first-child');
     var current;
-    var flag=fasle;
+
     var swidth;
 
 
@@ -91,6 +91,19 @@
     return this;
   };
 }( jQuery ));
-setTimeout(function() {
-$("#my-slider").camRollSlider();
-}, 0);
+function barinit(){
+    if(flag==false){
+      setTimeout(function() {
+        barinit();
+      }, 150);
+    }
+    else{
+      $("#my-slider").camRollSlider();
+    }
+}
+if(flag==true){
+  $("#my-slider").camRollSlider();
+}
+else{
+  barinit();
+}
