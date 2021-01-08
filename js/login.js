@@ -18,10 +18,13 @@ setTimeout(function(){
         }
         return "";
     }
-    function logout(){
-        if (user!=""){
-        document.cookie="username="+user+";expires=Thu, 01 Jan 1970 00:00:00 GMT";
-        }
-        location.reload();
-    }
 },100);
+function logout(){
+    var user=getCookie("username");
+    if (user!=""){
+    document.cookie="username="+user+";expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
+    location.reload();
+    
+
+}

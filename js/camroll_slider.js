@@ -95,7 +95,6 @@
   }
     // initial
     current = 0;
-
     barinit();
 
 
