@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Roboto-Condensed';
+    src: url('./Roboto-Condensed.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .rc {
+    display: inline-block;
+    font: normal normal normal 14px/1 Roboto-Condensed;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .rc-2x {
+    font-size: 2em;
+  }
+  .rc-3x {
+    font-size: 3em;
+  }
+  .rc-4x {
+    font-size: 4em;
+  }
+  .rc-5x {
+    font-size: 5em;
+  }
+  .rc-ul {
+    padding-left: 0;
+    margin-left: 2.14285714em;
+    list-style-type: none;
+  }
+  .rc-ul > li {
+    position: relative;
+  }
+  .rc-li {
+    position: absolute;
+    left: -2.14285714em;
+    width: 2.14285714em;
+    top: 0.14285714em;
+    text-align: center;
+  }
