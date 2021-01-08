@@ -75,8 +75,17 @@
     var flag;
     function barinit(){
       flag=document.getElementById("my-slider");
+      
       if(flag==null){
         setTimeout(function() {
+          barFirstItem=document.getElementsByClassName("");
+          wrapper=document.getElementsByClassName("");
+          screenRoll   = document.getElementsByClassName("crs-screen-roll");
+          screenItems = document.getElementsByClassName("crs-screen-item");
+          barRollWrap = document.getElementsByClassName("crs-bar-roll-wrap");
+          barRoll= document.getElementsByClassName("crs-bar-roll");
+          barItem= document.getElementsByClassName("crs-bar-roll-item");
+          barFirstItem= document.getElementsByClassName("crs-bar-roll-item:first-child");
           barinit();
         }, 150);
       }

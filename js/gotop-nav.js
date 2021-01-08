@@ -1,8 +1,23 @@
 
-
-
+    var flag;
+    function barload(){
+        flag=document.getElementById("my-slider");
+        if(flag==null){
+          setTimeout(function() {
+            barload();
+          }, 150);
+        }
+        else{
+          $("#my-slider").camRollSlider();
+        }
+    }
+    if(flag!=null){
       $("#my-slider").camRollSlider();
-
+    }
+    else{
+      barload();
+    }
+    
     function gotoTop(minHeight){
 
         $("#gotoTop").click(
