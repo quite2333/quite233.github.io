@@ -91,19 +91,3 @@
     return this;
   };
 }( jQuery ));
-function barinit(){
-    if(flag==false){
-      setTimeout(function() {
-        barinit();
-      }, 150);
-    }
-    else{
-      $("#my-slider").camRollSlider();
-    }
-}
-if(flag==true){
-  $("#my-slider").camRollSlider();
-}
-else{
-  barinit();
-}
