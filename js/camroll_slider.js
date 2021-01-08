@@ -72,11 +72,21 @@
 
 
     }
-
+    function barinit(){
+      this=document.getElementById("my-slider");
+      if(this==null){
+        setTimeout(function() {
+          barinit();
+        }, 150);
+      }
+      else{
+        setSizePos();
+      }
+  }
     // initial
     current = 0;
 
-      setSizePos();
+    barinit();
 
 
     barItem.click(function() {

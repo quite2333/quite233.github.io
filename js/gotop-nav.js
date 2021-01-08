@@ -1,23 +1,8 @@
 
-    var flag;
-    function barinit(){
-        flag=document.getElementById("my-slider");
-        if(flag==null){
-          setTimeout(function() {
-            barinit();
-          }, 150);
-        }
-        else{
-          $("#my-slider").camRollSlider();
-        }
-    }
-    if(flag!=null){
+
+
       $("#my-slider").camRollSlider();
-    }
-    else{
-      barinit();
-    }
-    
+
     function gotoTop(minHeight){
 
         $("#gotoTop").click(
