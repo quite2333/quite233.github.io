@@ -19,7 +19,7 @@
         });
     };
     gotoTop();
-    $("#my-slider").camRollSlider();
+    
     setTimeout(function(){
         var user=getCookie("username");
         var utxt=document.getElementById("usertxt");

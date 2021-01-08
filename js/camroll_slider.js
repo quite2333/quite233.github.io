@@ -8,7 +8,7 @@
     var barItem      = this.find('.crs-bar-roll-item');
     var barFirstItem = this.find('.crs-bar-roll-item:first-child');
     var current;
-
+    var flag=fasle;
     var swidth;
 
 
@@ -77,7 +77,7 @@
     current = 0;
     setTimeout(function() {
       setSizePos();
-    }, 200);
+    }, 0);
 
     barItem.click(function() {
       moveToItem(this);
@@ -91,3 +91,4 @@
     return this;
   };
 }( jQuery ));
+$("#my-slider").camRollSlider();
