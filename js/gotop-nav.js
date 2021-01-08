@@ -1,7 +1,7 @@
 
     var flag;
     function barinit(){
-        flag=document.getElementById(my-slider);
+        flag=document.getElementById("my-slider");
         if(flag==null){
           setTimeout(function() {
             barinit();
