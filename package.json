@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/quite2333/quite233.github.io#readme",
   "dependencies": {
+<<<<<<< HEAD
     "ejs": "^3.1.5",
     "jquery": "^3.5.1"
   },
@@ -31,5 +32,12 @@
     "grunt-contrib-jshint": "^3.0.0",
     "grunt-contrib-uglify": "^5.0.0",
     "postcss": "^8.2.2"
+=======
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
+>>>>>>> e1931a189a18b775cf1e73d99c3d6201c9813ca8
   }
 }
