@@ -19,4 +19,4 @@
         });
     };
     gotoTop();
-          $("#my-slider").camRollSlider();
+
