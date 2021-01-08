@@ -72,9 +72,10 @@
 
 
     }
+    var flag;
     function barinit(){
-      this=document.getElementById("my-slider");
-      if(this==null){
+      flag=document.getElementById("my-slider");
+      if(flag==null){
         setTimeout(function() {
           barinit();
         }, 150);
