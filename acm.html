@@ -99,6 +99,7 @@
                     $.get(urltpl+"?v=1.2.1", function(result){
                         var ht = ejs.compile(result)(data);
                         $("#art").html(ht);
+                        $("#my-slider").camRollSlider();
                     });
 
 
