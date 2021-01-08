@@ -65,7 +65,7 @@
         <div class="b-box">
             <h2>注册</h2>
             <div class="input-box">
-                <form action="login.html" method="post" name="log-check" onsubmit="return check()">
+                <form action="login.html" method="post" name="log-check" onsubmit="return false">
                     <div class="input-text">
                         <span class="iconfont icon-wode"></span>
                         <input type="text" name="user" id="user" placeholder="Username" autocomplete="on" >
@@ -163,8 +163,8 @@
             psw=x_pass;
             storage["username"]=user;
             storage["pwd"]=psw;
-            window.location.href="./login.html";
-            return ture;
+            window.location.href="/login.html";
+            return true;
         } 
 
     }
