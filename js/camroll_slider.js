@@ -77,7 +77,7 @@
     current = 0;
     setTimeout(function() {
       setSizePos();
-    }, 100);
+    }, 200);
 
     barItem.click(function() {
       moveToItem(this);
