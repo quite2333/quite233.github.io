@@ -24,4 +24,5 @@ setTimeout(function(){
         }
         location.reload();
     }
+    $("#my-slider").camRollSlider();
 },100);
