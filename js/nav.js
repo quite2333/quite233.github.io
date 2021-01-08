@@ -12,21 +12,6 @@ $.get("./tpl/head.tpl", function(result){
         utxt.innerHTML="您还未登录，请先登录!";
     }
     
-<<<<<<< HEAD
-=======
-
-        
-    
-     
-      
-},100);
-
-
-
-    
-});
-$("#my-slider").camRollSlider();
->>>>>>> e1931a189a18b775cf1e73d99c3d6201c9813ca8
     function getCookie(cname){
         var name = cname + "=";
         var ca = document.cookie.split(';');
@@ -41,7 +26,6 @@ $("#my-slider").camRollSlider();
         document.cookie="username="+user+";expires=Thu, 01 Jan 1970 00:00:00 GMT";
         }
         location.reload();
-<<<<<<< HEAD
         
     
       }
@@ -52,9 +36,6 @@ $("#my-slider").camRollSlider();
 
     
 });
-=======
-         }
->>>>>>> e1931a189a18b775cf1e73d99c3d6201c9813ca8
 var timeId;
 function show(){
   window.clearInterval(timeId);

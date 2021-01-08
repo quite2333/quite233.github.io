@@ -8,11 +8,7 @@
             <li><a href="./introduction.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;个人简介</a></li>
             <li><a href="./txt-list.html"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp;文章列表</a></li>
             <li><a href="./comments.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;给我留言</a></li>
-<<<<<<< HEAD
             <li><a href="res-list.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;学习资源</a></li>
-=======
-            <li><a href="./study-res.html"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp;学习资源</a></li>
->>>>>>> e1931a189a18b775cf1e73d99c3d6201c9813ca8
             </ul>
         </li>
         <li class="title mhiden">
@@ -22,11 +18,7 @@
             <a href="javascript:void(0)" onclick="logout()"><i class="icon icon-register" aria-hidden="true"></i>登出</a>
         </li>
         <li class="user_txt">
-<<<<<<< HEAD
             <h4 id="usertxt"></h4>
-=======
-            <h4 id="user"></h4>
->>>>>>> e1931a189a18b775cf1e73d99c3d6201c9813ca8
         </li>
         </ul>
     </nav>
@@ -64,7 +56,4 @@
         </div>
     </div>    
 </header>
-<<<<<<< HEAD
 
-=======
->>>>>>> e1931a189a18b775cf1e73d99c3d6201c9813ca8
