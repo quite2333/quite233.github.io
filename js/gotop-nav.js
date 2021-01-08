@@ -1,5 +1,5 @@
 
-    var flag;
+    var flag=document.getElementById("my-slider");
     function barload(){
         flag=document.getElementById("my-slider");
         if(flag==null){
