@@ -75,10 +75,7 @@
 
     // initial
     current = 0;
-    setTimeout(function(){
-      setSizePos();
-    },100);
-    
+    $(window).load(function(){ setSizePos();});
 
     barItem.click(function() {
       moveToItem(this);
